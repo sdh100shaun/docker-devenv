@@ -9,13 +9,13 @@ services:
         environment:
             - VIRTUAL_PORT=80
         volumes:
-            - .:/src
+            - .:/app
 
     centos-php:
         build: docker/php
         restart: always
         volumes:
-            - .:/src
+            - .:/app
         links:
             - db
           
